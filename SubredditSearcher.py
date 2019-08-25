@@ -17,9 +17,7 @@ class myApp(tk.Frame):
 
     def __init__(self, master=None):
         """ Inititalizer """
-
-        # uses super method
-        super().__init__(root)
+       super().__init__(root)
         self.grid()
 
         # sets title & root size
