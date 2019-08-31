@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """
 A Tkinter GUI tool to search Reddit subs.  The user enters a subreddit and results open in new window.
