@@ -16,7 +16,6 @@ class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
 
     def __init__(self, master=None):
-        """ Inititalizer """
         super().__init__(root)
         self.grid()
 
@@ -107,17 +106,10 @@ class myApp(tk.Frame):
         self.container = tk.Listbox(self.topFrame, height=20, width=80, font="Verdana 14")
         self.container.grid(row=2)
 
-        # creates scrollbar
-        self.scroll = tk.Scrollbar(self.topFrame, orient="vertical")
-
-        self.scroll.configure(command=self.container.yview)
-
         # stores 75 newest Subreddit titles in listbox
         for submission in reddit.subreddit(self.results).new(limit=75):
             self.container.insert(tk.END, str(submission.title))
             self.container.grid()
-        self.scroll.grid()
-
 
 
 if __name__ == "__main__":
