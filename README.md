@@ -1,5 +1,5 @@
 # SubredditSearcher
-A tool to search Reddit.  The user enters a SubReddit.
+A tool to search Reddit.  The user enters a SubReddit and the results appear in new window.
 
 
 ![](https://media.giphy.com/media/XbCqu8uSVSdngqhJVC/giphy.gif)
