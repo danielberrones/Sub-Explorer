@@ -30,7 +30,7 @@ class myApp(tk.Frame):
         """ Adds main widgets to root. """
 
         # places Reddit image
-        self.img = tk.PhotoImage(file="reddit.png")
+        self.img = tk.PhotoImage(file="main.png")
         self.imgLabel = tk.Label(image=self.img)
         self.imgLabel.grid(row=0,column=1)
 
@@ -91,7 +91,7 @@ class myApp(tk.Frame):
         self.topFrame.grid()
 
         # adds reddit image
-        self.im1 = tk.PhotoImage(file="subreddit1.png")
+        self.im1 = tk.PhotoImage(file="searchResultReddit.png")
         self.imgLabel1 = tk.Label(self.topFrame, image=self.im1)
         self.imgLabel1.grid(row=0,column=0)
 
