@@ -10,12 +10,12 @@ Email: daniel.a.berrones@gmail.com
 import tkinter as tk
 import praw
 
-reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
+reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
 
 class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
 
-    def __init__(self):
+    def __init__(self,master=None):
         super().__init__(root)
         self.grid()
 
@@ -103,11 +103,11 @@ class myApp(tk.Frame):
         self.quitButton.grid(row=1,column=0)
 
         # contains search results
-        self.container = tk.Listbox(self.topFrame, height=20, width=80, font="Verdana 14")
+        self.container = tk.Listbox(self.topFrame, height=20, width=80, font="Roboto 20")
         self.container.grid(row=2)
 
         # stores 75 newest Subreddit titles in listbox
-        for submission in reddit.subreddit(self.results).new(limit=75):
+        for submission in reddit.subreddit(self.results).new(limit=10):
             self.container.insert(tk.END, str(submission.title))
             self.container.grid()
 
