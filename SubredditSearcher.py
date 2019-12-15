@@ -91,7 +91,7 @@ class myApp(tk.Frame):
         self.topFrame.grid()
 
         # adds reddit image
-        self.im1 = tk.PhotoImage(file="searchResultReddit.png")
+        self.im1 = tk.PhotoImage(file="YourReddit.png")
         self.imgLabel1 = tk.Label(self.topFrame, image=self.im1)
         self.imgLabel1.grid(row=0,column=0)
 
