@@ -11,7 +11,7 @@ import tkinter as tk
 import praw
 
 
-reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+# reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
 
 
 class myApp(tk.Frame):
@@ -112,16 +112,6 @@ class myApp(tk.Frame):
         for submission in reddit.subreddit(self.results).new(limit=10):
             self.container.insert(tk.END, str(submission.title))
             self.container.grid()
-
-        # tester
-        self.testerButton = tk.Button(self.toplevel,text="Click to open new Window",command=self.testerWindow).grid(row=2,column=0)
-
-
-
-
-    def testerWindow(self):
-        self.toplevel1 = tk.Toplevel(self.toplevel)
-        self.toplevel1.grid()
 
 
 
