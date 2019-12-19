@@ -10,7 +10,7 @@ Email: daniel.a.berrones@gmail.com
 import tkinter as tk
 import praw
 
-reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="##YOUR_USER_AGENT_HERE##")
+reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
 
 class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
@@ -86,30 +86,41 @@ class myApp(tk.Frame):
         self.toplevel.grid()
         self.toplevel.title("Your search results for: {}".format(self.results))
 
-        # creates top frame
-        self.topFrame = tk.Frame(self.toplevel, height=80, width=20, padx=10,pady=10)
-        self.topFrame.grid()
+        # # creates top frame
+        # self.topFrame = tk.Frame(self.toplevel, height=80, width=20, padx=10,pady=10)
+        # self.topFrame.grid()
 
         # adds reddit image
         self.im1 = tk.PhotoImage(file="YourReddit.png")
-        self.imgLabel1 = tk.Label(self.topFrame, image=self.im1)
+        self.imgLabel1 = tk.Label(self.toplevel, image=self.im1)
         self.imgLabel1.grid(row=0,column=0)
 
         # quit button -- destroys top level window
-        self.quitButton = tk.Button(self.topFrame, command=self.toplevel.destroy,
+        self.quitButton = tk.Button(self.toplevel, command=self.toplevel.destroy,
                                     highlightbackground="indian red",
                                     text="QUIT",font="Arial 20",
                                     padx=5, pady=5)
-        self.quitButton.grid(row=1,column=0)
+        self.quitButton.grid(row=1,column=0)    
 
         # contains search results
-        self.container = tk.Listbox(self.topFrame, height=20, width=80, font="Roboto 20")
+        self.container = tk.Listbox(self.toplevel, height=20, width=80, font="Roboto 20")
         self.container.grid(row=2)
 
-        # stores 75 newest Subreddit titles in listbox
+        # stores titles in listbox
         for submission in reddit.subreddit(self.results).new(limit=10):
             self.container.insert(tk.END, str(submission.title))
             self.container.grid()
+
+        # tester
+        self.testerButton = tk.Button(self.toplevel,text="Click to open new Window",command=self.testerWindow).grid(row=2,column=0)
+
+
+
+
+    def testerWindow(self):
+        self.toplevel1 = tk.Toplevel(self.toplevel)
+        self.toplevel1.grid()
+
 
 
 if __name__ == "__main__":
