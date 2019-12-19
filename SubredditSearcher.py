@@ -10,7 +10,9 @@ Email: daniel.a.berrones@gmail.com
 import tkinter as tk
 import praw
 
-reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
+
+reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+
 
 class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
