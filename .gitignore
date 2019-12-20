@@ -1,3 +1,4 @@
 Credentials.txt
 test.py
-/__pycache__/*.pyc
+__pycache__/
+*.pyc
