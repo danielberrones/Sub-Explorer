@@ -11,7 +11,8 @@ import tkinter as tk
 import praw
 
 
-# reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
+
 
 
 class myApp(tk.Frame):
@@ -88,9 +89,9 @@ class myApp(tk.Frame):
         self.toplevel.grid()
         self.toplevel.title("Your search results for: {}".format(self.results))
 
-        # # creates top frame
-        # self.topFrame = tk.Frame(self.toplevel, height=80, width=20, padx=10,pady=10)
-        # self.topFrame.grid()
+        # creates top frame
+        self.topFrame = tk.Frame(self.toplevel, height=80, width=20, padx=10,pady=10)
+        self.topFrame.grid()
 
         # adds reddit image
         self.im1 = tk.PhotoImage(file="YourReddit.png")
