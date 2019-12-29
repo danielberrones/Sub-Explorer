@@ -10,7 +10,7 @@ Email: daniel.a.berrones@gmail.com
 import tkinter as tk
 import praw
 
-reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
 
 
 class myApp(tk.Frame):
@@ -31,7 +31,7 @@ class myApp(tk.Frame):
         """ Adds main widgets to root. """
 
         # places Reddit image
-        self.img = tk.PhotoImage(file="Reddit.png")
+        self.img = tk.PhotoImage(file="../img/Reddit.png")
         self.imgLabel = tk.Label(image=self.img)
         self.imgLabel.grid(row=0,column=1)
 
@@ -92,7 +92,7 @@ class myApp(tk.Frame):
         self.topFrame.grid()
 
         # adds reddit image
-        self.im1 = tk.PhotoImage(file="YourReddit.png")
+        self.im1 = tk.PhotoImage(file="../img/YourReddit.png")
         self.imgLabel1 = tk.Label(self.toplevel, image=self.im1)
         self.imgLabel1.grid(row=0,column=0)
 
