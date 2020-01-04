@@ -36,11 +36,11 @@ class myApp(tk.Frame):
 
         # creates Subreddit label
         self.label1 = tk.Label(root,
-                      text="Type a Subreddit: ",
-                      bg="khaki1", fg="tomato2",
-                      font="Arial 25 bold",
-                      borderwidth=3,
-                      relief="groove")
+                                text="Type a Subreddit: ",
+                                bg="khaki1", fg="tomato2",
+                                font="Arial 25 bold",
+                                borderwidth=3,
+                                relief="groove")
         self.label1.grid(row=3,column=1)
 
         # stores Subreddit search as string variable
@@ -60,9 +60,9 @@ class myApp(tk.Frame):
 
         # quit button -- destroys window
         self.button = tk.Button(root, command=root.destroy,
-                           highlightbackground="indian red",
-                           text="QUIT",font="Arial 20",
-                           height="5", width="10")
+                                highlightbackground="indian red",
+                                text="QUIT",font="Arial 20",
+                                height="5", width="10")
         self.button.grid(row=7,column=1)
 
 
