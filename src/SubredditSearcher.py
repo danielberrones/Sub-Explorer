@@ -30,17 +30,12 @@ class myApp(tk.Frame):
         """ Adds main widgets to root. """
 
         # places Reddit image
-        self.img = tk.PhotoImage(file="../img/Reddit.png")
+        self.img = tk.PhotoImage(file="img/Reddit.png")
         self.imgLabel = tk.Label(image=self.img)
         self.imgLabel.grid(row=0,column=1)
 
         # creates Subreddit label
-        self.label1 = tk.Label(root,
-                                text="Type a Subreddit: ",
-                                bg="khaki1", fg="tomato2",
-                                font="Arial 25 bold",
-                                borderwidth=3,
-                                relief="groove")
+        self.label1 = tk.Label(root, text="Type a Subreddit: ", bg="khaki1", fg="tomato2",font="Monospace 22 bold",                        borderwidth=1,relief="solid")
         self.label1.grid(row=3,column=1)
 
         # stores Subreddit search as string variable
@@ -59,10 +54,7 @@ class myApp(tk.Frame):
         self.clear.grid(row=6,column=1)
 
         # quit button -- destroys window
-        self.button = tk.Button(root, command=root.destroy,
-                                highlightbackground="indian red",
-                                text="QUIT",font="Arial 20",
-                                height="5", width="10")
+        self.button = tk.Button(root, command=root.destroy, highlightbackground="indian red", text="QUIT",                                  font="Arial 20", height="5", width="10")
         self.button.grid(row=7,column=1)
 
 
