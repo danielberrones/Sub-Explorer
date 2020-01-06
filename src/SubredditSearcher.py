@@ -3,14 +3,17 @@
 """
 A Tkinter GUI tool to search Reddit subs.  The user enters a subreddit and results open in new window.
 
-Created by: Daniel Berrones
+Created by: Daniel Berrones 
 Email: daniel.a.berrones@gmail.com
+Website: http://www.danielberrones.com
 """
 
 import tkinter as tk
 import praw
 
+
 reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+
 
 class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
@@ -21,7 +24,7 @@ class myApp(tk.Frame):
 
         # sets title & root size
         root.title("Subreddit Searcher")
-        root.geometry("400x400")
+        root.geometry("500x620")
 
         # places main widgets on root
         self.main_widgets()
@@ -32,7 +35,7 @@ class myApp(tk.Frame):
         # places Reddit image
         self.img = tk.PhotoImage(file="img/Reddit.png")
         self.imgLabel = tk.Label(image=self.img)
-        self.imgLabel.grid(row=0,column=1)
+        self.imgLabel.grid(row=0,column=1,padx=50,pady=40)
 
         # creates Subreddit label
         self.label1 = tk.Label(root, text="Type a Subreddit: ", bg="khaki1", fg="tomato2",font="Monospace 22 bold",                        borderwidth=1,relief="solid")
@@ -43,25 +46,24 @@ class myApp(tk.Frame):
 
         # entry box -- user types the Subreddit
         self.query = tk.Entry(root, text="", textvariable=self.searchSub,font="Serif 25")
-        self.query.grid(row=4, column=1)
+        self.query.grid(row=4, column=1, pady=20)
 
         # enter button -- searches for Subreddit
-        self.button1 = tk.Button(root, text="ENTER", command=self.prawReddit, font="Arial 18")
+        self.button1 = tk.Button(root, text="ENTER", command=self.prawReddit, font="Monospace 18")
         self.button1.grid(row=5, column=1)
 
         # clear button -- removes text in entry box
-        self.clear = tk.Button(root, command=self.clear_text, text="CLEAR",font="Arial 18")
+        self.clear = tk.Button(root, command=self.clear_text, text="CLEAR",font="Monospace 18")
         self.clear.grid(row=6,column=1)
 
         # quit button -- destroys window
         self.button = tk.Button(root, command=root.destroy, highlightbackground="indian red", text="QUIT",                                  font="Arial 20", height="5", width="10")
-        self.button.grid(row=7,column=1)
+        self.button.grid(row=7,column=1, pady=20)
 
 
     def clear_text(self):
         """ Clears text in entry box where user types a Subreddit. """
 
-        # removes text
         try:
             self.query.delete(0,tk.END)
         except AttributeError:
