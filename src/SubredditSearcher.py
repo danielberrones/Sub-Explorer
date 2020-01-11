@@ -14,7 +14,7 @@ import praw
 
 # reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
 reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
-# dont putt your password here
+# dont putt your password here!!!!!!
 
 class myApp(tk.Frame):
     """ Tkinter tool to search Reddit """
