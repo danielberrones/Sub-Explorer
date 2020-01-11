@@ -12,7 +12,8 @@ import tkinter as tk
 import praw
 
 
-reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+# reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+reddit = praw.Reddit(client_id="xZHnziUldeZEbg", client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent="cdanger")
 
 
 class myApp(tk.Frame):
@@ -23,7 +24,7 @@ class myApp(tk.Frame):
         self.grid()
 
         # sets title & root size
-        root.title("Subreddit Searcher")
+        root.title("The Mini Reddit Rocket")
         root.geometry("500x620")
 
         # places main widgets on root
