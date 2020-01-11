@@ -24,7 +24,7 @@ class myApp(tk.Frame):
         self.grid()
 
         # sets title & root size
-        root.title("The Mini Reddit Rocket")
+        root.title("The Mini Reddit Rocket!!")
         root.geometry("500x620")
 
         # places main widgets on root
