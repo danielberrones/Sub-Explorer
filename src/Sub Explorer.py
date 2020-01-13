@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-A Tkinter GUI tool to search Reddit subs.  The user enters a subreddit and results open in new window.
+A Tkinter GUI tool to search Reddit subs. 
 
 Created by: Daniel Berrones 
 Email: daniel.a.berrones@gmail.com
