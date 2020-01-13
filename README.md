@@ -1,4 +1,4 @@
-# SubredditSearcher
+# Sub Explorer
 A tool to search Reddit.
 
 
