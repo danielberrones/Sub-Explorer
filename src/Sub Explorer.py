@@ -13,7 +13,9 @@ from tkinter import ttk
 import praw
 
 
-reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+# reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
+
+reddit = praw.Reddit(client_id='xZHnziUldeZEbg', client_secret="P52m77JjNefq4-XVyLEsrkaPGS8",user_agent='carldangerAPI33')
 
 
 class myApp:
@@ -187,13 +189,17 @@ class myApp:
         # KARMA CONTAINER/OUTPUT
         self.subKarmaBox=[]
         for x in range(len(self.subAuthorBox)):
-            self.subKarmaBox.append(self.subAuthorBox[x].comment_karma)
+            self.subKarmaBox.append(self.subAuthorBox[x].link_karma)
         self.container6 = tk.Listbox(self.toplevel,height=6, width=20,font="Courier 16")
 
         for i, j in enumerate(self.subKarmaBox,start=1):
             self.container6.insert(tk.END,str(i)+'.)'+str(j))
             self.container6.grid(row=4,column=1,padx=3,pady=3,sticky=tk.E)
         ########################################################################################
+
+        with open('/Users/danielberrones/testDIR/test1/test.txt','w') as f:
+            for i in range(len(self.subAuthorBox)):
+                f.write(str(self.subAuthorBox))
 
         
         #COMMENT CONTAINER/OUTPUT
