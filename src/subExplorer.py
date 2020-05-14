@@ -13,10 +13,6 @@ from tkinter import ttk
 import praw
 
 
-# reddit = praw.Reddit(client_id="##YOUR_CLIENT_ID_HERE##", client_secret="##YOUR_CLIENT_SECRET_HERE##",user_agent="YOUR_USER_AGENT_HERE")
-
-
-
 class myApp:
     def __init__(self, master):
         self.master = master
