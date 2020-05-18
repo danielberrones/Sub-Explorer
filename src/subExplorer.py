@@ -22,7 +22,7 @@ class myApp:
 
     def create_widgets(self):
         # MAIN REDDIT IMAGE
-        self.im = tk.PhotoImage(file='/Users/danielberrones/Desktop/todo/pics/reddit.png')
+        self.im = tk.PhotoImage(file='/home/morretti/dbGit/Sub-Explorer/img/Reddit.png')
         self.imgLabel = tk.Label(image=self.im)
         self.imgLabel.grid(row=0, column=0, columnspan=4,padx=5,pady=5,sticky=tk.NSEW)
 
@@ -97,7 +97,7 @@ class myApp:
 
 
         # adds reddit image
-        self.im1 = tk.PhotoImage(file='/Users/danielberrones/Desktop/todo/pics/subreddit1.png')
+        self.im1 = tk.PhotoImage(file='/home/morretti/dbGit/Sub-Explorer/img/YourReddit.png')
         self.imgLabel1 = tk.Label(self.toplevel, image=self.im1)
         self.imgLabel1.grid(row=0,column=0)
 
@@ -192,7 +192,7 @@ class myApp:
             self.container6.grid(row=4,column=1,padx=3,pady=3,sticky=tk.E)
         ########################################################################################
 
-        with open('/Users/danielberrones/testDIR/test1/test.txt','w') as f:
+        with open('/home/morretti/testDIR/test.txt','w') as f:
             for i in range(len(self.subAuthorBox)):
                 f.write(str(self.subAuthorBox))
 
